@@ -22,6 +22,7 @@ nav {
     position: fixed;
     top: 10px;
     left: 3%;
+    z-index: 1000;
 
     background: rgba(169, 79, 18, 0.92);
     backdrop-filter: blur(10px);
@@ -100,43 +101,72 @@ a:hover::after {
     position: absolute;
     width: 400px;
     height: 150px;
-     top: 40%;
+     top: 37%;
     left: 40%;
     transform: translate(-100%, -50%);
     text-align: left;
-    color: rgba(165, 73, 6, 0.968);
-     box-shadow: 27px 15px 52px -6px rgba(0,0,0,0.86);
--webkit-box-shadow: 27px 15px 52px -6px rgba(0,0,0,0.86);
--moz-box-shadow: 27px 15px 52px -6px rgba(0,0,0,0.86);
-border-radius: 23px 89px 91px 28px;
--webkit-border-radius: 23px 89px 91px 28px;
--moz-border-radius: 23px 89px 91px 28px;
 }
 .branding h1 {
      position: relative;
-    font-size: 45px;
+     font-family: 'Montserrat',sans-serif;
+    font-size: 25px;
     margin-left: 5px;
+    color: rgba(165, 73, 6, 0.968);;
 }
 
 .branding h3 {
      position: relative;
-    font-size: 22px;
+    font-size: 40px;
       margin-left: 5px;
+      color: black;
 }
-.cp1{
-    width: 50px;
-    height: 70px;
-    position: absolute;
-    top: 40%;
-    right: 20%;
+
+.branding h6{
+ position: relative;
+  font-family: 'Montserrat',sans-serif;
+ margin-left: 5px;
+ font-size: 13px;
+ color: black;
+}
+.branding hr{
+    color: #a94f12;
 }
 li,a,:hover {
    text-decoration:none
 }
-footer{
-    border-style: dotted;
+.joke{
+    position: absolutes;
+    width: 130px;
+    top: 20%;
+    left: 85%;
+    padding: 5px;
+    color: rgba(165, 73, 6, 0.968);
+    position: relative;
 }
+.joker{
+    position: relative;
+    width: 105px;
+    height: 135px;
+    text-align: center;
+    border: 1px solid rgba(165, 73, 6, 0.968);
+   background: whitesmoke ;
+   opacity: 0.7;
+   font-size: 55px;
+    margin-top:  5px;
+    padding: 10px;
 
+border-radius: 13px 13px 13px 13px;
+-webkit-border-radius: 13px 13px 13px 13px;
+-moz-border-radius: 13px 13px 13px 13px;
+}
+.joker p{
+    font-size: 13px;
+    opacity: 1;
+    color: black;
+}
+.joker i{
+    opacity: 1;
+}
 
 
 
