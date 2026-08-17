@@ -28,12 +28,16 @@ nav {
     backdrop-filter: blur(10px);
 
     border-bottom: 1px solid rgba(255, 228, 196, 0.25);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+  box-shadow: -1px 2px 8px 1px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 2px 8px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 2px 8px 1px rgba(0,0,0,0.75);
 
     letter-spacing: 1px;
     border-radius: 15px;
 }
-
+nav:hover{
+     transform: scale(1.01);
+}
 
 ul {
     display: flex;
@@ -129,13 +133,16 @@ a:hover::after {
  color: black;
 }
 .branding hr{
-    color: #a94f12;
+        width: 130px;
+    border: none;
+    border-top: 2px solid #a94f12;
+    margin: 8px 5px;
+
 }
 li,a,:hover {
    text-decoration:none
 }
 .joke{
-    position: absolutes;
     width: 130px;
     top: 20%;
     left: 85%;
@@ -164,8 +171,71 @@ border-radius: 13px 13px 13px 13px;
     opacity: 1;
     color: black;
 }
-.joker i{
+.joker:hover {
+    transform: scale(1.05);
+}
+.iopi{
     opacity: 1;
+     color: rgba(165, 73, 6, 0.968);
+}
+.collections {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+    position: relative;
+    z-index: 5;
+    left: -10%;
+    top:28%;
+}
+
+.collection-box {
+    width: 33.33%;
+    height: 200px;
+    position: relative;
+     overflow: hidden;
+    border: 1px solid #b65c1d;
+    border-radius: 20px;
+    background-color: #e5ded4;
+}
+
+.collection-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.collection-box:hover img {
+    transform: scale(1.05);
+}
+
+.collection-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 25px;
+    color: white;
+    background: linear-gradient(transparent, black);
+}
+
+.collection-content h2 {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.collection-content p {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.collection-content a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    font-size: 10px;
+    letter-spacing: 1px;
 }
 
 
@@ -183,21 +253,30 @@ border-radius: 13px 13px 13px 13px;
 
 .container1 {
     width: 100%;
-    height: 100vh;
- background-color: antiquewhite;
+    height: 80px;
+ background-color: bisque;
+}
+.collection-dropdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+     background-color: #b65c1d;
 }
 .container2 {
     width: 100%;
     height: 100vh;
- background-color: antiquewhite;
+ background-color: rgb(209, 179, 141);
 }
 .container3 {
     width: 100%;
     height: 100vh;
- background-color: antiquewhite;
+ background-color: rgb(171, 218, 170);
 }
 .container4 {
     width: 100%;
     height: 100vh;
- background-color: antiquewhite;
+ background-color: rgb(167, 158, 211);
 }
