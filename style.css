@@ -403,6 +403,16 @@ li,a,:hover {
 
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
 /* new.arrivals */
 
 .container2 {
@@ -410,22 +420,108 @@ li,a,:hover {
     height: 100vh;
  background-color: rgb(209, 179, 141);
 }
-.new-heading {
-    text-align: center;
-    
+.new-arrival-items {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-.new-heading h1 {
-    padding-top:  70px;
-    font-size: 45px;
-    letter-spacing: 3px;
+.new-arrival-card {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    text-align: center;
+
+    border: 1px solid #eadfd5;
+    transition: 0.4s ease;
+}
+
+.new-arrival-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(80, 40, 15, 0.15);
+}
+
+
+/* IMAGE */
+
+.new-arrival-card img {
+    width: 100%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+
+    transition: 0.5s ease;
+}
+
+.new-arrival-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* NEW TAG */
+
+.new-arrival-card span {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    background: #71320f;
+    color: white;
+
+    padding: 7px 14px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+
+    z-index: 2;
+}
+
+
+/* PRODUCT NAME */
+
+.new-arrival-card h3 {
+    margin-top: 18px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #4b2818;
+}
+
+
+/* PRICE */
+
+.new-arrival-card p {
+    margin: 8px 0 16px;
+    font-size: 16px;
+    font-weight: bold;
     color: #71320f;
 }
 
-.new-heading p {
-    margin-top: 10px;
-    font-size: 15px;
-    color: #70452c;
+
+/* BUTTON */
+
+.new-arrival-card button {
+    border: 1px solid #71320f;
+    background: #71320f;
+    color: white;
+
+    padding: 10px 22px;
+    margin-bottom: 5px;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.new-arrival-card button:hover {
+    background: transparent;
+    color: #71320f;
 }
 .container3 {
     width: 100%;
