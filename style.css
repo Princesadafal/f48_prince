@@ -284,8 +284,7 @@ li,a,:hover {
 /* =========================
    MOBILE RESPONSIVE
    ========================= */
-
-@media (max-width: 600px) {
+@media (max-width: 600px)  {
 
     /* NAVBAR */
     nav {
@@ -309,40 +308,59 @@ li,a,:hover {
     }
 
 
-    /* HERO IMAGE */
+      /* HERO IMAGE */
     .container > img {
         width: 100%;
         height: 100vh;
         object-fit: cover;
+        object-position: 65% center;
+        display: block;
+    }
+     .container::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 1;
+        pointer-events: none;
     }
 
-
-    /* BRANDING */
+    /* BRANDING TEXT */
     .branding {
-        width: 260px;
-        top: 30%;
-        left: 8%;
-        transform: none;
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
     }
 
     .branding h1 {
-        font-size: 20px;
+        font-size: 45px;
+        margin-bottom: 10px;
     }
 
     .branding h3 {
-        font-size: 27px;
-        line-height: 1.1;
-    }
-
-    .branding h6 {
-        font-size: 10px;
+        font-size: 16px;
         line-height: 1.4;
     }
 
-    .branding hr {
-        width: 100px;
+    .branding h6 {
+        font-size: 12px;
+        line-height: 1.5;
     }
 
+    .branding hr {
+        width: 60%;
+        margin: 12px auto;
+    }
+
+    .branding a {
+        display: inline-block;
+        padding: 10px 15px;
+    }
+ 
 
     /* PREMIUM / TRENDING / DELIVERY */
     .joke {
@@ -437,7 +455,7 @@ li,a,:hover {
 
 /* .collection-box */
 .container1 {
-    width: 60px;
+    width: 100%;
     height: auto;    
     background-color: bisque;
 }
@@ -505,6 +523,139 @@ li,a,:hover {
     color: white;
     cursor: pointer;
 }
+/* CONTAINER */
+
+.container1 {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: bisque;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 992px) {
+
+    .collection-heading h1 {
+        padding-top: 60px;
+        font-size: 38px;
+        letter-spacing: 2px;
+    }
+
+    .collection-heading p {
+        font-size: 14px;
+    }
+
+    .products {
+        width: 92%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 40px auto;
+    }
+
+    .product-card img {
+        width: 85%;
+        height: 280px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .container1 {
+        width: 100%;
+        min-height: 100vh;
+        padding-bottom: 30px;
+    }
+
+    .collection-heading h1 {
+        padding-top: 40px;
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    .collection-heading p {
+        width: 90%;
+        margin: 10px auto 0;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .products {
+        width: 92%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 35px auto;
+    }
+
+    .product-card {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+    }
+
+    .product-card img {
+        width: 90%;
+        height: 350px;
+    }
+
+    .product-card h3 {
+        font-size: 17px;
+        margin-top: 8px;
+    }
+
+    .product-card p {
+        font-size: 14px;
+        margin-top: 6px;
+    }
+
+    .product-card button {
+        padding: 9px 20px;
+        margin-bottom: 8px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 400px) {
+
+    .collection-heading h1 {
+        font-size: 26px;
+        padding-top: 35px;
+    }
+
+    .collection-heading p {
+        font-size: 12px;
+    }
+
+    .products {
+        width: 94%;
+        gap: 20px;
+    }
+
+    .product-card img {
+        width: 90%;
+        height: 300px;
+    }
+
+    .product-card h3 {
+        font-size: 16px;
+    }
+
+    .product-card p {
+        font-size: 13px;
+    }
+}
 
 
 
@@ -518,11 +669,12 @@ li,a,:hover {
 /* new.arrivals */
 .container2 {
     width: 100%;
-    height: 100vh;
+    height: 220vh; 
  background-color:bisque;
 }
 .new-arrival-items {
     width: 90%;
+    height: 80%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -530,7 +682,8 @@ li,a,:hover {
 }
 .new-arrival-card {
     position: relative;
-    width: 100%;
+    width: 350px;
+    height: auto;
     background: #fff;
     overflow: hidden;
     text-align: center;
@@ -598,11 +751,135 @@ li,a,:hover {
     background: transparent;
     color: #71320f;
 }
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* TABLET */
+@media (max-width: 992px) {
+
+    .container2 {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 0;
+    }
+
+    .new-arrival-items {
+        width: 92%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .new-arrival-card img {
+        height: 400px;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .container2 {
+        height: auto;
+        min-height: 100vh;
+        padding: 30px 0;
+    }
+
+    .new-arrival-items {
+        width: 92%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .new-arrival-card img {
+        height: 450px;
+    }
+
+    .new-arrival-card h3 {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .new-arrival-card p {
+        font-size: 15px;
+        margin: 7px 0 14px;
+    }
+
+    .new-arrival-card button {
+        padding: 10px 20px;
+        margin-bottom: 15px;
+    }
+
+    .new-arrival-card span {
+        top: 12px;
+        left: 12px;
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 400px) {
+
+    .new-arrival-items {
+        width: 94%;
+    }
+
+    .new-arrival-card img {
+        height: 380px;
+    }
+
+    .new-arrival-card h3 {
+        font-size: 15px;
+    }
+
+    .new-arrival-card p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container3 {
     width: 100%;
     height: 100vh;
  background-color: rgb(171, 218, 170);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container4 {
     width: 100%;
     height: 600vh;
